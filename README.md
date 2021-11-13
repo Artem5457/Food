@@ -1,7 +1,7 @@
 # Foodify Application
 This project was created by using [API](https://www.themealdb.com/api/json/v1/1/random.php).
 
-[DEMO LINK](https://artem5457.github.io/Foodify-application/)
+[DEMO LINK](https://artem5457.github.io/Food/)
 
 # Description
 Foodify Application is an application where you can read many different recipes from our catalog and save them to Favourites, if you like it. In addition, this app allow the user to add his own recipes to My Recipes.
