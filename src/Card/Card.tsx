@@ -29,9 +29,6 @@ export const Card: React.FC<Props> = ({ addRecipe, recipes }) => {
       });
   }, []);
 
-  // eslint-disable-next-line no-console
-  console.log(recipe);
-
   if (loadingStatus) {
     return (<Loader />);
   }
@@ -48,9 +45,6 @@ export const Card: React.FC<Props> = ({ addRecipe, recipes }) => {
       "
       style={{ height: 'max-content' }}
     >
-      <h1 className="pb-6 text-2xl">
-        Select your favourite random recipe:
-      </h1>
       <div
         className="
         shadow-md
