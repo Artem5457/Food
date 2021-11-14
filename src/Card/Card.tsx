@@ -17,6 +17,7 @@ export const Card: React.FC<Props> = ({ addRecipe, recipes }) => {
       strInstructions: '',
       strMealThumb: '',
       strYoutube: '',
+      strSource: '',
     },
   );
   const [loadingStatus, setLoadingStatus] = useState<boolean>(true);

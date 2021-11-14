@@ -5,6 +5,7 @@ export interface Recipe {
   strInstructions: string | null;
   strMealThumb: string | null;
   strYoutube: string | null;
+  strSource: string;
 }
 
 export interface MyRecipe {

@@ -48,6 +48,9 @@ export const RecipeCard: React.FC<Props> = ({ recipe }) => {
           >
             {recipe.strInstructions}
           </div>
+          <a href={recipe.strSource} style={{ color: 'blue' }}>
+            Link
+          </a>
 
         </div>
       </div>
