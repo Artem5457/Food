@@ -23,7 +23,6 @@ Technologies used in project:
 
 # Advices
 1) To begin using this application you need to click on one of buttons!!!
-2) If you see `error 404` after reloading of page, open this single-page application again and you'll see that all your selected recipes were saved in `localStorage`.
 
 # Installing
 - Fork and clone this repository
