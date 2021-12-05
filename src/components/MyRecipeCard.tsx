@@ -14,7 +14,7 @@ export const MyRecipeCard: React.FC<Props> = ({ yourRecipe }) => {
         rounded-md
         overflow-hidden
         bg-white"
-        style={{ width: '320px' }}
+        style={{ width: '310px' }}
       >
         <img
           src="https://i.ibb.co/FVkTVkF/Placeholder.png"

@@ -14,7 +14,7 @@ export const RecipeCard: React.FC<Props> = ({ recipe }) => {
         rounded-md
         overflow-hidden
         bg-white"
-        style={{ width: '320px' }}
+        style={{ width: '310px' }}
       >
         <img
           src={(recipe.strMealThumb === null)

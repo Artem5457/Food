@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { getRecipe } from '../api/recipe';
 import { Recipe } from '../types/recipe';
-import { Loader } from '../Loader/Loader';
+import { Loader } from '../Loader';
+import StatusContext from '../context';
 
-type Props = {
-  recipes: Recipe[];
-  addRecipe: (rec: Recipe) => void;
-};
-
-export const Card: React.FC<Props> = ({ addRecipe, recipes }) => {
+export const Card = () => {
+  const { addRecipe, ourRecipes } = useContext(StatusContext);
   const [recipe, setRecipe] = useState<Recipe>(
     {
       idMeal: '0',
@@ -52,7 +49,7 @@ export const Card: React.FC<Props> = ({ addRecipe, recipes }) => {
         rounded-md
         overflow-hidden
         bg-white"
-        style={{ width: '320px' }}
+        style={{ width: '310px' }}
       >
         <img
           src={(recipe.strMealThumb === null)
@@ -154,7 +151,7 @@ export const Card: React.FC<Props> = ({ addRecipe, recipes }) => {
       <div className="pt-6 text-2xl">
         Counter of favourite recipes from catalog:
         {' '}
-        {recipes.length}
+        {ourRecipes.length}
       </div>
     </main>
   );

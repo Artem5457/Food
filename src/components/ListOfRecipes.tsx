@@ -1,12 +1,11 @@
-import React from 'react';
-import { Recipe } from '../types/recipe';
+import { useContext } from 'react';
 import { RecipeCard } from './RecipeCard';
+import StatusContext from '../context';
+import { Recipe } from '../types/recipe';
 
-type Props = {
-  ourRecipes: Recipe[],
-};
+export const ListOfRecipes = () => {
+  const { ourRecipes } = useContext(StatusContext);
 
-export const ListOfRecipes: React.FC<Props> = ({ ourRecipes }) => {
   return (
     <>
       <h1
@@ -18,14 +17,14 @@ export const ListOfRecipes: React.FC<Props> = ({ ourRecipes }) => {
         My favourite recipes from catalog:
       </h1>
       <ul className="
-        list-none
-        flex
-        flex-wrap
-        justify-center
-        my-16
-        gap-9"
+          list-none
+          flex
+          flex-wrap
+          justify-center
+          my-16
+          gap-9"
       >
-        {ourRecipes.map(recipe => (
+        {ourRecipes.map((recipe: Recipe) => (
           <li
             key={recipe.strInstructions}
           >

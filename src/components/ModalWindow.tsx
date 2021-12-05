@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   Dialog, DialogContent, DialogContentText, DialogTitle,
 } from '@mui/material';
-import { MyRecipe } from '../types/recipe';
+import StatusContext from '../context';
 
-type Props = {
-  addDishStatus: boolean;
-  closeWindow: () => void;
-  addMyRecipe: (myRec: MyRecipe) => void
-};
-
-export const ModalWindow: React.FC<Props> = ({
-  addDishStatus,
-  closeWindow,
-  addMyRecipe,
-}) => {
+export const ModalWindow: React.FC = () => {
+  const { addDishStatus, closeWindow, addMyRecipe } = useContext(StatusContext);
   const [title, setTitle] = useState('');
   const [instruction, setInstruction] = useState('');
 

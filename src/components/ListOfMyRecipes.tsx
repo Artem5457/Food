@@ -1,12 +1,11 @@
-import React from 'react';
+import { useContext } from 'react';
 import { MyRecipe } from '../types/recipe';
 import { MyRecipeCard } from './MyRecipeCard';
+import StatusContext from '../context';
 
-type Props = {
-  yourRecipes: MyRecipe[],
-};
+export const ListOfMyRecipes = () => {
+  const { yourRecipes } = useContext(StatusContext);
 
-export const ListOfMyRecipes: React.FC<Props> = ({ yourRecipes }) => {
   return (
     <>
       <h1
@@ -25,7 +24,7 @@ export const ListOfMyRecipes: React.FC<Props> = ({ yourRecipes }) => {
         my-16
         gap-9"
       >
-        {yourRecipes.map(recipe => (
+        {yourRecipes.map((recipe: MyRecipe) => (
           <li
             key={recipe.id}
           >
