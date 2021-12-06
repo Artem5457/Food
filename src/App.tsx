@@ -62,6 +62,7 @@ const App: React.FC = () => {
       value={{
         addDishStatus,
         setAddDishStatus,
+        ourRecipes,
       }}
     >
       <Header />
