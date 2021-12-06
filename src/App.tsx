@@ -62,22 +62,20 @@ const App: React.FC = () => {
       value={{
         addDishStatus,
         setAddDishStatus,
-        handleClose,
-        addMyRecipe,
-        addRecipe,
-        ourRecipes,
-        yourRecipes,
       }}
     >
       <Header />
 
       <Routes>
-        <Route path="/" element={<Card />} />
-        <Route path="/favourites" element={<ListOfRecipes />} />
-        <Route path="/my_favourites" element={<ListOfMyRecipes />} />
+        <Route path="/" element={<Card addRecipe={addRecipe} ourRecipes={ourRecipes} />} />
+        <Route path="/favourites" element={<ListOfRecipes ourRecipes={ourRecipes} />} />
+        <Route path="/my_favourites" element={<ListOfMyRecipes yourRecipes={yourRecipes} />} />
       </Routes>
 
-      <ModalWindow />
+      <ModalWindow
+        closeWindow={handleClose}
+        addMyRecipe={addMyRecipe}
+      />
 
     </StatusContext.Provider>
   );

@@ -1,11 +1,14 @@
-import { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getRecipe } from '../api/recipe';
 import { Recipe } from '../types/recipe';
 import { Loader } from '../Loader';
-import StatusContext from '../context';
 
-export const Card = () => {
-  const { addRecipe, ourRecipes } = useContext(StatusContext);
+type Props = {
+  addRecipe: (recipe: Recipe) => void;
+  ourRecipes: Recipe[];
+};
+
+export const Card: React.FC<Props> = ({ addRecipe, ourRecipes }) => {
   const [recipe, setRecipe] = useState<Recipe>(
     {
       idMeal: '0',

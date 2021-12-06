@@ -1,11 +1,12 @@
-import { useContext } from 'react';
+import React from 'react';
 import { MyRecipe } from '../types/recipe';
 import { MyRecipeCard } from './MyRecipeCard';
-import StatusContext from '../context';
 
-export const ListOfMyRecipes = () => {
-  const { yourRecipes } = useContext(StatusContext);
+type Props = {
+  yourRecipes: MyRecipe[];
+};
 
+export const ListOfMyRecipes: React.FC<Props> = ({ yourRecipes }) => {
   return (
     <>
       <h1
